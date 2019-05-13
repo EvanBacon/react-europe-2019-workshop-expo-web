@@ -4,6 +4,15 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
+    "web": "expo start --web",
+    "web-only": "expo start --web-only",
+    "web-add": "yarn add expo@next react-native-web react-dom",
+    "web-add-dev": "yarn add -D babel-preset-expo@latest",
+    "web-build": "expo build:web",
+    "web-build-small": "expo build:web --no-polyfill --no-pwa",
+    "web-serve-prod": "serve web-build",
+    "web-deploy": "netlify deploy --prod",
+    "web-profile": "lighthouse http://localhost:5000/ --view",
     "eject": "expo eject"
   },
   "dependencies": {
@@ -14,7 +23,10 @@
     "react-native-web": "^0.11.2"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.1.1"
+    "babel-preset-expo": "^5.1.1",
+    "lighthouse-cli": "^0.1.2",
+    "netlify-cli": "^2.11.18",
+    "serve": "^11.0.0"
   },
   "private": true
 }

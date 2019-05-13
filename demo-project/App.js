@@ -1,12 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { Camera } from 'expo';
+
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <Camera style={styles.container}>
+        <Text>Open up Ap.js to start working on your app!</Text>
+      </Camera>
     );
   }
 }
